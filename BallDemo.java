@@ -61,16 +61,17 @@ public class BallDemo
             newBall.draw();
             balls.add(newBall);
 
-            // main animation loop
-            boolean finished = false;
-            while (!finished) {
-                myCanvas.wait(50);
-                for (BoxBall b : balls) {
-                    b.move();
-                }
-            }
-
         }
+
+        // main animation loop
+        boolean finished = false;
+        while (!finished) {
+            myCanvas.wait(50);
+            for (BoxBall b : balls) {
+                b.move();
+            }
+        }
+
     }
 
     /**
