@@ -60,10 +60,17 @@ public class BallDemo
             BoxBall newBall = new BoxBall(x, y, diameter, c, box, myCanvas);
             newBall.draw();
             balls.add(newBall);
-            
-            
-        }
 
+            // main animation loop
+            boolean finished = false;
+            while (!finished) {
+                myCanvas.wait(50);
+                for (BoxBall b : balls) {
+                    b.move();
+                }
+            }
+
+        }
     }
 
     /**
