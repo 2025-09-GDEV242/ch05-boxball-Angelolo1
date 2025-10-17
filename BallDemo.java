@@ -22,7 +22,7 @@ public class BallDemo
         myCanvas = new Canvas("Ball Demo", 600, 500);
         box=new Box (100,100,500,400, myCanvas);
         box.draw();
-        
+
     }
 
     /**
@@ -30,11 +30,18 @@ public class BallDemo
      * 
      * @param numOfBalls number of balls to simulate bouncing, clamped between 5-50. 
      */
-    public void boxBounce()
+    public void boxBounce(int numOfBalls)
     {
-        // you must implement this
+        if (numOfBalls < 5) {
+            numOfBalls = 5;
+        } else if (numOfBalls > 50) {
+            numOfBalls = 50;
+        }
+        
+        
+        
     }
-    
+
     /**
      * Simulate two bouncing balls
      */
