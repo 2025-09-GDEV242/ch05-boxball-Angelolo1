@@ -44,8 +44,19 @@ public class BallDemo
 
         java.util.Random rand = new java.util.Random();
         java.util.ArrayList<BoxBall> balls = new java.util.ArrayList<>();
-        
-        
+
+        // create the requested number of BoxBall objects
+        for (int i = 0; i < numOfBalls; i++) {
+            int x = rand.nextInt(400) + 100;   // random start roughly inside box
+            int y = rand.nextInt(300) + 100;
+            int diameter = rand.nextInt(15) + 10;  // size 10–25 px
+
+            // random color not close to white
+            int r = rand.nextInt(200);
+            int g = rand.nextInt(200);
+            int b = rand.nextInt(200);
+            Color c = new Color(r, g, b);
+        }
 
     }
 
