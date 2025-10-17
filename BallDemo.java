@@ -56,6 +56,10 @@ public class BallDemo
             int g = rand.nextInt(200);
             int b = rand.nextInt(200);
             Color c = new Color(r, g, b);
+
+            BoxBall newBall = new BoxBall(x, y, diameter, c, box, myCanvas);
+            newBall.draw();
+            balls.add(newBall);
             
             
         }
