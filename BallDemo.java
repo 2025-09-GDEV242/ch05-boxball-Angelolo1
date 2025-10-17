@@ -32,14 +32,21 @@ public class BallDemo
      */
     public void boxBounce(int numOfBalls)
     {
+        //keep values between 5-50 range
         if (numOfBalls < 5) {
             numOfBalls = 5;
         } else if (numOfBalls > 50) {
             numOfBalls = 50;
         }
+
+        myCanvas.setVisible(true);
+        box.draw();     // draw box once
+
+        java.util.Random rand = new java.util.Random();
+        java.util.ArrayList<BoxBall> balls = new java.util.ArrayList<>();
         
         
-        
+
     }
 
     /**
