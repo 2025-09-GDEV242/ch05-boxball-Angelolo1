@@ -92,8 +92,18 @@ public class BoxBall
         erase();
             
         // compute new position
+        xPosition += xSpeed;
+        yPosition += ySpeed;
   
         // figure out if it has hit the left or right wall
+        if (xPosition <= myBox.getLeftWall()) {
+            xPosition = myBox.getLeftWall();
+            xSpeed = -xSpeed;
+        }
+        else if (xPosition + diameter >= myBox.getRightWall()) {
+            xPosition = myBox.getRightWall() - diameter;
+            xSpeed = -xSpeed;
+        }
         
         // figure out if it has hit the top or bottom wall
         
