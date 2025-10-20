@@ -1,6 +1,6 @@
 import java.awt.*;
 import java.awt.geom.*;
-import java.until.Random;
+import java.util.Random;
 
 /**
  * Class BoxBall - a graphical ball that moves similar to the ball in PONG.
